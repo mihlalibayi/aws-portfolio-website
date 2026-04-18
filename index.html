@@ -12,7 +12,8 @@
   <!-- NAV -->
   <nav>
     <div class="nav-logo">MB://portfolio</div>
-    <ul class="nav-links">
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav-links" id="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#certifications">Certs</a></li>
@@ -56,9 +57,14 @@
     <div class="section-label">Projects</div>
     <div class="section-title">What I'm <span>Building</span></div>
     <div class="divider"></div>
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="live">Live</button>
+      <button class="filter-btn" data-filter="progress">In Progress</button>
+    </div>
     <div class="projects-grid">
 
-      <div class="project-card">
+      <div class="project-card" data-status="live">
         <div class="project-num">00</div>
         <div class="project-title">Portfolio Website</div>
         <div class="project-desc">My professional front door, showing my projects, certifications, and cloud direction in one place.</div>
@@ -68,11 +74,14 @@
         </div>
         <div class="project-footer">
           <span class="status-badge status-live">Live</span>
-          <a href="https://github.com/mihlalibayi/aws-portfolio-website" target="_blank" class="project-link">GitHub →</a>
+          <div style="display:flex;gap:1rem;">
+            <a href="https://d1c4i4mapjz151.cloudfront.net" target="_blank" class="project-link">Live Site →</a>
+            <a href="https://github.com/mihlalibayi/aws-portfolio-website" target="_blank" class="project-link">GitHub →</a>
+          </div>
         </div>
       </div>
 
-      <div class="project-card">
+      <div class="project-card" data-status="progress">
         <div class="project-num">01</div>
         <div class="project-title">Multi-Tier Cloud Architecture</div>
         <div class="project-desc">A layered cloud system built the way real production environments are structured, with separate network, application, and data layers.</div>
@@ -89,7 +98,7 @@
         </div>
       </div>
 
-      <div class="project-card">
+      <div class="project-card" data-status="progress">
         <div class="project-num">02</div>
         <div class="project-title">Serverless Notes API</div>
         <div class="project-desc">A fully managed backend API with no servers to maintain, built to show how modern applications handle data at scale.</div>
@@ -104,7 +113,7 @@
         </div>
       </div>
 
-      <div class="project-card">
+      <div class="project-card" data-status="progress">
         <div class="project-num">03</div>
         <div class="project-title">Event-Driven Image Pipeline</div>
         <div class="project-desc">An automated image processing system that triggers and runs itself, showing how cloud services talk to each other without manual input.</div>
@@ -120,7 +129,7 @@
         </div>
       </div>
 
-      <div class="project-card">
+      <div class="project-card" data-status="progress">
         <div class="project-num">04</div>
         <div class="project-title">CI/CD Pipeline</div>
         <div class="project-desc">An automated deployment workflow that pushes updates to the portfolio site the moment new code is pushed to GitHub.</div>
@@ -136,7 +145,7 @@
         </div>
       </div>
 
-      <div class="project-card">
+      <div class="project-card" data-status="progress">
         <div class="project-num">05</div>
         <div class="project-title">RAG AI Document Chatbot</div>
         <div class="project-desc">An AI assistant that reads your own documents and answers questions from them, built using AWS Bedrock and vector search.</div>
