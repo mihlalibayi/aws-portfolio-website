@@ -390,3 +390,52 @@
       section { padding: 4rem 5vw; }
       footer { flex-direction: column; gap: 0.5rem; text-align: center; }
     }
+
+    /* ── MOBILE MENU TOGGLE ── */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--accent);
+      font-size: 1.2rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      .menu-toggle { display: block; }
+      #nav-links {
+        display: none;
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: var(--navy);
+        flex-direction: column;
+        padding: 1.5rem 6vw;
+        gap: 1.2rem;
+        border-bottom: 1px solid var(--border);
+      }
+      #nav-links.open { display: flex; }
+    }
+
+    /* ── FILTER BAR ── */
+    .filter-bar {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .filter-btn {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      padding: 0.35rem 1.1rem;
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid transparent;
+      color: var(--white-dim);
+      border-radius: 0;
+      cursor: pointer;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover { color: var(--white); border-bottom-color: rgba(79,195,247,0.4); }
+    .filter-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
