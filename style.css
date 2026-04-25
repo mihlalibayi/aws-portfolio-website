@@ -159,6 +159,21 @@
       background: linear-gradient(135deg, rgba(79,195,247,0.05) 0%, transparent 60%);
     }
     .photo-icon { font-size: 2.5rem; opacity: 0.4; }
+    .hero-photo-img {
+      width: 220px; height: 220px;
+      border-radius: 4px;
+      object-fit: cover;
+      object-position: top;
+      border: 1.5px solid var(--border);
+      display: block;
+    }
+    .hero-photo-img {
+      width: 220px; height: 220px;
+      border-radius: 4px;
+      object-fit: cover;
+      border: 1.5px solid var(--border);
+      display: block;
+    }
 
     /* SECTIONS */
     section { padding: 6rem 6vw; }
