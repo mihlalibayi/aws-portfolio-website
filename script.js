@@ -1,4 +1,4 @@
-// ── MOBILE MENU TOGGLE ──
+// MOBILE MENU TOGGLE
 const menuToggle = document.getElementById('menu-toggle');
 const navLinks = document.getElementById('nav-links');
 
@@ -8,7 +8,7 @@ if (menuToggle) {
   });
 }
 
-// ── SMOOTH SCROLLING ──
+// SMOOTH SCROLLING
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -20,7 +20,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// ── PROJECT CARD FILTER ──
+// PROJECT CARD FILTER
 const filterButtons = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.project-card');
 
@@ -42,7 +42,7 @@ filterButtons.forEach(btn => {
   });
 });
 
-// ── NAV SHADOW ON SCROLL ──
+// NAV SHADOW ON SCROLL
 window.addEventListener('scroll', () => {
   const nav = document.querySelector('nav');
   if (window.scrollY > 40) {
@@ -50,4 +50,25 @@ window.addEventListener('scroll', () => {
   } else {
     nav.style.boxShadow = 'none';
   }
+});
+
+// SCROLL SPY - highlight active nav link based on section in view
+const sections = document.querySelectorAll('section[id]');
+const navAnchors = document.querySelectorAll('.nav-links a');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 100;
+    if (window.scrollY >= sectionTop) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  navAnchors.forEach(a => {
+    a.classList.remove('active');
+    if (a.getAttribute('href') === '#' + current) {
+      a.classList.add('active');
+    }
+  });
 });

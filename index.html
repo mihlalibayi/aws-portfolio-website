@@ -45,7 +45,7 @@
     <div class="divider"></div>
     <div class="about-inner">
       <p>
-        I graduated with a degree in Information Systems from Stellenbosch University, where I developed a strong foundation in how systems are designed, integrated, and managed. Since then I have been channelling that into cloud architecture, specifically AWS. I am currently building a portfolio of real AWS projects that cover networking, serverless, automation, and AI integration, all while working toward my AWS Solutions Architect certification. My goal is to design cloud systems that actually solve problems, not just pass exams.
+        I graduated with a degree in Information Systems from Stellenbosch University, where I developed a strong foundation in how systems are designed, integrated, and managed. Since then I have been channelling that into cloud architecture, specifically AWS. I am currently building a portfolio of real AWS projects that cover networking, serverless, automation, and AI integration, all while working toward my AWS Solutions Architect certification.
       </p>
     </div>
   </section>
@@ -57,12 +57,12 @@
     <div class="divider"></div>
     <div class="filter-bar">
       <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="live">Live</button>
+      <button class="filter-btn" data-filter="completed">Completed</button>
       <button class="filter-btn" data-filter="progress">In Progress</button>
     </div>
     <div class="projects-grid">
 
-      <div class="project-card" data-status="live">
+      <div class="project-card" data-status="completed">
         <div class="project-num">00</div>
         <div class="project-title">Portfolio Website</div>
         <div class="project-desc">My professional front door, showing my projects, certifications, and cloud direction in one place.</div>
@@ -71,7 +71,7 @@
           <span class="service-tag">CloudFront</span>
         </div>
         <div class="project-footer">
-          <span class="status-badge status-live">Live</span>
+          <span class="status-badge status-complete">Completed</span>
           <div style="display:flex;gap:1rem;">
             <a href="https://d1c4i4mapjz151.cloudfront.net" target="_blank" class="project-link">Live Site →</a>
             <a href="https://github.com/mihlalibayi/aws-portfolio-website" target="_blank" class="project-link">GitHub →</a>
@@ -79,7 +79,7 @@
         </div>
       </div>
 
-      <div class="project-card" data-status="progress">
+      <div class="project-card" data-status="completed">
         <div class="project-num">01</div>
         <div class="project-title">Multi-Tier Cloud Architecture</div>
         <div class="project-desc">A layered cloud system built the way real production environments are structured, with separate network, application, and data layers.</div>
@@ -91,7 +91,7 @@
           <span class="service-tag">Security Groups</span>
         </div>
         <div class="project-footer">
-          <span class="status-badge status-progress">In Progress</span>
+          <span class="status-badge status-complete">Completed</span>
           <a href="https://github.com/mihlalibayi/aws-multi-tier-architecture" target="_blank" class="project-link">GitHub →</a>
         </div>
       </div>
@@ -193,9 +193,33 @@
   <!-- EDUCATION AND TRAINING -->
   <section id="education">
     <div class="section-label">Education &amp; Training</div>
-    <div class="section-title">Degrees &amp; <span>Courses</span></div>
+    <div class="section-title">Degree &amp; <span>Courses</span></div>
     <div class="divider"></div>
     <div class="edu-grid">
+
+      <div class="edu-card">
+        <a href="assets/certificate-badges/aws_practitioner_challenge.png" target="_blank" class="edu-cert-link">
+          <img src="assets/certificate-badges/aws_practitioner_challenge.png" alt="AWS AI Practitioner Challenge Certificate" class="edu-cert-img"/>
+        </a>
+        <div class="edu-info">
+          <div class="edu-name">AWS AI Practitioner Challenge</div>
+          <div class="edu-org">Udacity</div>
+          <div class="edu-date">April 21, 2026</div>
+          <span class="cert-status cert-complete">Completed</span>
+        </div>
+      </div>
+
+      <div class="edu-card">
+        <a href="assets/certificate-badges/aws_cloud_essentials.png" target="_blank" class="edu-cert-link">
+          <img src="assets/certificate-badges/aws_cloud_essentials.png" alt="AWS Cloud Practitioner Essentials Certificate" class="edu-cert-img"/>
+        </a>
+        <div class="edu-info">
+          <div class="edu-name">AWS Cloud Practitioner Essentials</div>
+          <div class="edu-org">AWS Training &amp; Certification</div>
+          <div class="edu-date">April 05, 2026</div>
+          <span class="cert-status cert-complete">Completed</span>
+        </div>
+      </div>
 
       <div class="edu-card">
         <div class="edu-initials">SU</div>
@@ -215,30 +239,6 @@
           <div class="edu-name">GenAI Course for Software Engineers</div>
           <div class="edu-org">WeThinkCode_</div>
           <div class="edu-date">September 19, 2025</div>
-          <span class="cert-status cert-complete">Completed</span>
-        </div>
-      </div>
-
-      <div class="edu-card">
-        <a href="assets/certificate-badges/aws_cloud_essentials.png" target="_blank" class="edu-cert-link">
-          <img src="assets/certificate-badges/aws_cloud_essentials.png" alt="AWS Cloud Practitioner Essentials Certificate" class="edu-cert-img"/>
-        </a>
-        <div class="edu-info">
-          <div class="edu-name">AWS Cloud Practitioner Essentials</div>
-          <div class="edu-org">AWS Training &amp; Certification</div>
-          <div class="edu-date">April 05, 2026</div>
-          <span class="cert-status cert-complete">Completed</span>
-        </div>
-      </div>
-
-      <div class="edu-card">
-        <a href="assets/certificate-badges/aws_practitioner_challenge.png" target="_blank" class="edu-cert-link">
-          <img src="assets/certificate-badges/aws_practitioner_challenge.png" alt="AWS AI Practitioner Challenge Certificate" class="edu-cert-img"/>
-        </a>
-        <div class="edu-info">
-          <div class="edu-name">AWS AI Practitioner Challenge</div>
-          <div class="edu-org">Udacity</div>
-          <div class="edu-date">April 21, 2026</div>
           <span class="cert-status cert-complete">Completed</span>
         </div>
       </div>
