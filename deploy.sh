@@ -8,7 +8,8 @@ aws s3 sync . s3://mihlali-bayi-portfolio \
   --exclude ".gitignore" \
   --exclude "README.md" \
   --exclude "deploy.sh" \
-  --exclude "*.md"
+  --exclude "*.md" \
+  --exclude "docs/*"
 
 echo "Invalidating CloudFront cache..."
 aws cloudfront create-invalidation \
